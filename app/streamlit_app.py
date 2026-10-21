@@ -6,7 +6,10 @@ Reads results/robyn_posterior_params.npz (500 posterior draws), so no model refi
 """
 from pathlib import Path
 
-import matplotlib.pyplot as plt
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np
 import streamlit as st
 
@@ -56,3 +59,4 @@ for i, ax in enumerate(axes):
     ax.set_title(channels[i])
 fig.tight_layout()
 st.pyplot(fig)
+plt.close(fig)

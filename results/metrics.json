@@ -1,0 +1,226 @@
+{
+  "simulated": {
+    "prior_check": {
+      "observed_inside_prior_90": 1.0,
+      "prior_90_width_vs_mean": 1.9287717505539543
+    },
+    "fit_seconds": 42.15586996078491,
+    "diagnostics": {
+      "max_r_hat": 1.0029250040615192,
+      "min_ess_bulk": 1859.2797475748332,
+      "min_ess_tail": 2075.92946938257,
+      "divergences": 3,
+      "n_draws": 4000
+    },
+    "posterior_check": {
+      "in_sample_mape_pct": 2.7467017404169454,
+      "in_sample_90_coverage": 0.9086538461538461
+    },
+    "recovery": {
+      "covered_90": 18,
+      "n_params": 20,
+      "by_param": {
+        "alpha": 4,
+        "beta": 3,
+        "k": 4,
+        "roas": 4,
+        "s": 3
+      },
+      "roas_mean_abs_error": 1.0782286679130773
+    },
+    "calibration": {
+      "lift_test": {
+        "channel": "search",
+        "x0": 0.0,
+        "x1": 19836.96349482457,
+        "weeks": 4,
+        "lift": 291975.75459985377,
+        "se": 43788.283244430335
+      },
+      "diagnostics": {
+        "max_r_hat": 1.0036172653332296,
+        "min_ess_bulk": 1649.2911083246595,
+        "min_ess_tail": 1607.7959522474316,
+        "divergences": 0,
+        "n_draws": 4000
+      },
+      "search": {
+        "channel": "search",
+        "true_roas": 3.6318122857352764,
+        "uncalibrated_mean": 1.8284090569963312,
+        "uncalibrated_p5": 0.09781574724345296,
+        "uncalibrated_p95": 5.703058955442265,
+        "calibrated_mean": 3.4580244919232843,
+        "calibrated_p5": 2.547222649429507,
+        "calibrated_p95": 4.347187870589436
+      }
+    },
+    "holdout": {
+      "bayes_holdout_mape_pct": 2.398317393875963,
+      "ridge_holdout_mape_pct": 2.748080007446381,
+      "bayes_holdout_90_coverage": 0.9230769230769231,
+      "diagnostics": {
+        "max_r_hat": 1.0036277390632116,
+        "min_ess_bulk": 1725.436203000057,
+        "min_ess_tail": 1526.165094806575,
+        "divergences": 0,
+        "n_draws": 4000
+      }
+    },
+    "budget": {
+      "expected_gain": 13500.553957167118,
+      "gain_interval": [
+        -1847.377106670578,
+        26041.316999171133
+      ],
+      "expected_gain_pct": 4.438966226032724,
+      "p_improvement": 0.937,
+      "success": true,
+      "weekly_media_contribution_current": 304137.3434650591,
+      "weekly_budget": 85847.0662654727,
+      "true_gain_of_recommendation": 11926.874577349314,
+      "oracle_true_gain": 12242.766843637713,
+      "model": "calibrated (with search lift test)"
+    }
+  },
+  "robyn": {
+    "weeks": 208,
+    "channels": [
+      "tv",
+      "ooh",
+      "print",
+      "facebook",
+      "search"
+    ],
+    "controls": [
+      "competitor_sales_B",
+      "newsletter",
+      "event_event1",
+      "event_event2"
+    ],
+    "prior_check": {
+      "observed_inside_prior_90": 0.9903846153846154,
+      "prior_90_width_vs_mean": 1.8357039033717624
+    },
+    "fit_seconds": 14.657640933990479,
+    "diagnostics": {
+      "max_r_hat": 1.005731183992905,
+      "min_ess_bulk": 2375.8867494012225,
+      "min_ess_tail": 1863.9892745998184,
+      "divergences": 0,
+      "n_draws": 4000
+    },
+    "posterior_check": {
+      "in_sample_mape_pct": 5.9632377212145915,
+      "in_sample_90_coverage": 0.9567307692307693
+    },
+    "roas": [
+      {
+        "channel": "tv",
+        "spend_share": 0.2125037400439251,
+        "contribution_share_mean": 0.05259048586124365,
+        "roas_mean": 6.455764425703265,
+        "roas_p5": 4.297625448256008,
+        "roas_p95": 9.204831091647272,
+        "p_roas_gt_1": 1.0,
+        "ridge_roas": 5.260256244358264
+      },
+      {
+        "channel": "ooh",
+        "spend_share": 0.6187122845725472,
+        "contribution_share_mean": 0.02230732002656217,
+        "roas_mean": 0.9405150035884194,
+        "roas_p5": 0.12346550952430295,
+        "roas_p95": 2.3106782752444692,
+        "p_roas_gt_1": 0.36725,
+        "ridge_roas": 1.783831673907458
+      },
+      {
+        "channel": "print",
+        "spend_share": 0.053379465384848335,
+        "contribution_share_mean": 0.016709648251213675,
+        "roas_mean": 8.165826669754525,
+        "roas_p5": 2.526984743421061,
+        "roas_p95": 15.305244780489902,
+        "p_roas_gt_1": 0.98875,
+        "ridge_roas": 11.351107343822482
+      },
+      {
+        "channel": "facebook",
+        "spend_share": 0.03071744798833914,
+        "contribution_share_mean": 0.015359978064937224,
+        "roas_mean": 13.0440523520572,
+        "roas_p5": 2.202390921671944,
+        "roas_p95": 26.45234904815155,
+        "p_roas_gt_1": 0.98025,
+        "ridge_roas": 3.8697953623356955
+      },
+      {
+        "channel": "search",
+        "spend_share": 0.08468706201034004,
+        "contribution_share_mean": 0.05410966912933516,
+        "roas_mean": 16.667285747572482,
+        "roas_p5": 2.5809316055353184,
+        "roas_p95": 38.903722052671775,
+        "p_roas_gt_1": 0.9835,
+        "ridge_roas": 9.675955764872212
+      }
+    ],
+    "holdout": {
+      "bayes_holdout_mape_pct": 5.355313658857766,
+      "ridge_holdout_mape_pct": 6.4629829479899685,
+      "bayes_holdout_90_coverage": 1.0,
+      "diagnostics": {
+        "max_r_hat": 1.002291399608373,
+        "min_ess_bulk": 2589.5337863287737,
+        "min_ess_tail": 1715.3583444845244,
+        "divergences": 0,
+        "n_draws": 4000
+      }
+    },
+    "budget": {
+      "expected_gain": 45189.53574743891,
+      "gain_interval": [
+        7164.252743674268,
+        94891.33086134872
+      ],
+      "expected_gain_pct": 14.643689411135567,
+      "p_improvement": 0.984,
+      "success": true,
+      "weekly_media_contribution_current": 308593.9238309386,
+      "weekly_budget": 34378.6638092422
+    },
+    "allocation": [
+      {
+        "channel": "tv",
+        "current_weekly": 11372.690256410251,
+        "optimal_weekly": 9861.556269988028,
+        "change_pct": -13.287392449385203
+      },
+      {
+        "channel": "ooh",
+        "current_weekly": 8769.220512820511,
+        "optimal_weekly": 4384.610256410256,
+        "change_pct": -50.0
+      },
+      {
+        "channel": "print",
+        "current_weekly": 2692.306837606838,
+        "optimal_weekly": 4038.460256410257,
+        "change_pct": 50.0
+      },
+      {
+        "channel": "facebook",
+        "current_weekly": 2047.2667152251113,
+        "optimal_weekly": 3070.900072837667,
+        "change_pct": 50.0
+      },
+      {
+        "channel": "search",
+        "current_weekly": 9497.179487179488,
+        "optimal_weekly": 13023.136953595997,
+        "change_pct": 37.12636442405135
+      }
+    ]
+  }
+}

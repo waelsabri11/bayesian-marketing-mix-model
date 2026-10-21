@@ -5,3 +5,4 @@ __pycache__/
 data/raw/
 *.nc
 .DS_Store
+*.log

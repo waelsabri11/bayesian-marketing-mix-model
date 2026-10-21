@@ -77,3 +77,16 @@ def test_budget_optimiser_respects_constraints():
     assert np.isclose(out["optimal"].sum(), 20.0)
     assert np.all(out["optimal"] >= 5 - 1e-6) and np.all(out["optimal"] <= 15 + 1e-6)
     assert out["optimal"][1] > 10 and out["expected_gain"] > 0 and out["p_improvement"] == 1.0
+
+
+def test_streamlit_app_renders():
+    from pathlib import Path
+
+    from streamlit.testing.v1 import AppTest
+
+    app = Path(__file__).resolve().parents[1] / "app" / "streamlit_app.py"
+    if not (app.parents[1] / "results" / "robyn_posterior_params.npz").exists():
+        pytest.skip("run `uv run mmm-run` first")
+    at = AppTest.from_file(str(app), default_timeout=60).run()
+    assert not at.exception
+    assert len(at.metric) == 3
